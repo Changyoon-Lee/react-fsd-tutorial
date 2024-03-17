@@ -1,7 +1,9 @@
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { NavLink, Outlet } from "react-router-dom";
 import { pathKeys } from "~shared/lib/react-router";
 
 export function GenericLayout() {
+  // const { data } = useSuspenseQuery()
   return (
     <>
       <Outlet />
