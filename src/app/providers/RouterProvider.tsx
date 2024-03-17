@@ -13,5 +13,6 @@ const router = createBrowserRouter([
 ]);
 
 export function BrowserRouter() {
+  console.log("BrowserRouter");
   return <RouterProvider router={router} />;
 }
