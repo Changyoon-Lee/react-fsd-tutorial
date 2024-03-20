@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { pathKeys } from "~shared/lib/react-router";
 
 export function GenericLayout() {
-  // const { data } = useSuspenseQuery()
+  const { data } = useSuspenseQuery();
   return (
     <>
       <Outlet />
