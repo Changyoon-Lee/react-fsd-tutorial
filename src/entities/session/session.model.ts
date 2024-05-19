@@ -36,3 +36,8 @@ export const sessionStore = createStore<SessionState>()(
 
 // token이 로컬상태에 저장되어있는지 여부
 export const hasToken = () => Boolean(sessionStore.getState().token);
+export function authorizationHeader() {
+  if (hasToken()) {
+    return { Authorization: `Bearer ${sessionStore.getState().token}` };
+  }
+}

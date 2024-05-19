@@ -4,15 +4,19 @@ import {
   redirect,
   useRouteError,
 } from "react-router-dom";
+import { homePageRoute } from "~pages/home";
+import { GenericLayout } from "~pages/layouts";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>hello world</div>,
+    element: <GenericLayout />,
+    children: [
+      homePageRoute
+    ]
   },
 ]);
 
 export function BrowserRouter() {
-  console.log("BrowserRouter");
   return <RouterProvider router={router} />;
 }

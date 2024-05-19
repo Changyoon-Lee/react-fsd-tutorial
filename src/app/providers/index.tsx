@@ -1,8 +1,12 @@
+import { QueryClientProvider } from "./QueryClientProvider";
 import { BrowserRouter } from "./RouterProvider";
-
+import '~shared/main.css';
 function Providers() {
-  console.log("Providers");
-  return <BrowserRouter />;
+  return (
+    <QueryClientProvider>
+      <BrowserRouter />
+    </QueryClientProvider>
+  );
 }
 
 export const Provider = () => <Providers />;

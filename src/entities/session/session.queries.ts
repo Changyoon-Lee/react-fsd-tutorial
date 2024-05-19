@@ -2,6 +2,7 @@ import { queryOptions as tsqQueryOptions } from "@tanstack/react-query";
 import { queryClient } from "~shared/lib/react-query/queryClient";
 import { User } from "./session.types";
 import { hasToken } from "./session.model";
+import { currentUserQuery } from "./session.api";
 
 // api end point (query id 이기도 함)
 const keys = {
